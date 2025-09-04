@@ -9,9 +9,8 @@ export const computeMetadataNameFromLabel = (label: string): string => {
   }
 
   if (/[^A-Za-z0-9\s]/.test(prefixedLabel)) {
-    return prefixedLabel
+    return prefixedLabel;
   }
-  
 
   const formattedString = slugify(prefixedLabel, {
     trim: true,
@@ -20,7 +19,7 @@ export const computeMetadataNameFromLabel = (label: string): string => {
   });
 
   if (formattedString === '') {
-    console.log('Error formatting label to name:', { label });
+    throw new Error('Invalid label');
   }
 
   return camelCase(formattedString);

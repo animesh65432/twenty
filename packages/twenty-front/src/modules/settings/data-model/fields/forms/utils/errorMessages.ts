@@ -2,7 +2,7 @@ export enum errors {
   LabelNotUnique = 'LABEL_NOT_UNIQUE',
   LabelNotFormattable = 'LABEL_NOT_FORMATTABLE',
   LabelEmpty = 'LABEL_EMPTY',
-  LabelUnsupportedSpecialCharacters= 'LABEL_UNSUPPORTED_SPECIAL_CHARACTER',
+  LabelUnsupportedSpecialCharacters = 'LABEL_UNSUPPORTED_SPECIAL_CHARACTER',
 }
 
 export const getErrorMessageFromError = (error?: string) => {
