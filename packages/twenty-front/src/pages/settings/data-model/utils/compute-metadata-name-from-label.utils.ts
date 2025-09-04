@@ -8,6 +8,11 @@ export const computeMetadataNameFromLabel = (label: string): string => {
     return '';
   }
 
+  if (/[^A-Za-z0-9\s]/.test(prefixedLabel)) {
+    return prefixedLabel;
+  }
+  
+
   const formattedString = slugify(prefixedLabel, {
     trim: true,
     separator: '_',
